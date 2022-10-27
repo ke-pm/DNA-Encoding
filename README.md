@@ -25,5 +25,14 @@ this project uses the algorithm provided in the "Next-Generation Digital Informa
 
     # int2bp
     this function converts the adress of a block of information into bp
+
+    #byt2bp
+    this function converts a byte into a bp
+
+    #bp2bool
+    this function converts a bp into a boolean
+    
+    #compare_input_with_output
+    this function takes 2 parameters, input which is the numpy array that we encoded and the output which is the result of the encoding, which is also a numpy array.the function compares if the two arrays are similar and returns a boolean. when the value is true that means the two arrays are identical and the encoding and the decoding process was successful.
     
 
