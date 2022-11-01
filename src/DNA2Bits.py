@@ -55,7 +55,7 @@ def verify_segments_order(input_list):
     input_list.sort(key = get_address)
     for i in range(len(input_list)):
         if get_address(input_list[i]) != i:
-            print('oligo at position')
+            print('oligo with adress'+get_address(input_list[i])+'has the wrong position'+i+'. Possible data is mising')
 
 
 def decode(string_file_name, input_list):
@@ -81,6 +81,7 @@ def compare_input_with_output(input, output):
     l = numpy.array_equal(input_array[:minl], output_array[:minl])
     print(input_array[16:24], output_array[16:24], l)
 
-output = encode('', "The_Picture_of_Dorian_Gray.npy")    
+inarray = numpy.load("The_Picture_of_Dorian_Gray.npy")
+output = encode('', inarray)    
 decode('', output)
 compare_input_with_output("The_Picture_of_Dorian_Gray.npy", "decode.npy")
